@@ -17,8 +17,10 @@ function App() {
   return (
     <div className="App">
       <Book page={page}/>
-      <button onClick={previousPage}> Voltar </button>
-      <button onClick={nextPage}> Avançar </button>
+      <div className="footer">
+        <button onClick={previousPage}> Voltar </button>
+        <button onClick={nextPage}> Avançar </button>
+      </div>
     </div>
   );
 }

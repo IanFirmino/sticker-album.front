@@ -1,8 +1,11 @@
-.page{
+.pagesContainer {
     display: flex;
-    border: 1px solid black;
+    justify-content: center;
+    align-items: center;
+    height:100vh;  
 }
 
-.book{
-    display: flex;
+.bookContainer{
+    text-align: center;
+    border: 1px solid black;
 }

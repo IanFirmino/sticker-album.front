@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 function CardPhoto({name, photo, description}){
 
     return (
-        <div className={styles.container}>
+        <div className={styles.cardContainer}>
             <h1>{name}</h1>
             <img src={photo} alt={name}></img>
             <p>{description}</p>
