@@ -1,27 +1,23 @@
-import { useState } from 'react';
 import './App.css';
-import Book from './components/Book';
-
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
+import Album from './components/pages/Album';
+import Home from './components/pages/Home';
+import Navbar from './components/layouts/Navbar';
+import Footer from './components/layouts/Footer';
+  
 function App() {
-
-  const [page, setPage] = useState(1);
-
-  function nextPage(){
-    setPage(page + 1);
-  }
-
-  function previousPage(){
-    setPage(page < 2 ? 1 : page - 1);
-  }
   
   return (
-    <div className="App">
-      <Book page={page}/>
-      <div className="footer">
-        <button onClick={previousPage}> Voltar </button>
-        <button onClick={nextPage}> Avançar </button>
-      </div>
-    </div>
+
+    <Router>
+      <Navbar/>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/album" element={<Album />} />
+      </Routes>
+      <Footer/>
+    </Router>
+
   );
 }
 
