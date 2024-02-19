@@ -1,8 +1,19 @@
 import Page from "./Page"
 import styles from "./Book.module.css"
+import LoadingPage from "./LoadingPage";
 
 function Book({ page }){
-    return (
+
+    const LoadingPages = (
+        <div className={styles.bookContainer}>
+            <div>
+                <LoadingPage/>
+            </div>
+            <p>Page {page}/5</p>
+        </div>
+    );
+
+    const pages = (
         <div className={styles.bookContainer}>
             <div className={styles.pagesContainer}>
                 <Page/>
@@ -10,6 +21,10 @@ function Book({ page }){
             </div>
             <p>Page {page}/5</p>
         </div>
+    )
+
+    return (
+        pages
     )
 }
 

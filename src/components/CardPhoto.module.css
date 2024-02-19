@@ -3,4 +3,5 @@
     margin: 5px;
     background-color: whitesmoke;
     max-width: 20%;
+    min-width: 160px;
 }
