@@ -1,7 +1,21 @@
+import { FaFacebook, FaInstagram, FaLinkedinIn } from 'react-icons/fa'
+import './Footer.css'
 
 function Footer(){
     return (
-        <footer>Rodapé</footer>
+        <footer>
+            <ul className='social_list'>
+                <li>
+                    <FaFacebook/>
+                </li>
+                <li>
+                    <FaInstagram/>
+                </li>
+                <li>    
+                    <FaLinkedinIn/>
+                </li>
+            </ul>
+        </footer>
     )
 }
 
